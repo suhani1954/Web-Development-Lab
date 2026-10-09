@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Git and GitHub</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #303447;
+        }
+
+        header {
+            background: #423568;
+            color: white;
+            padding: 35px 0;
+        }
+
+        header h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        header p {
+            color: #e2ddf3;
+            margin-bottom: 0;
+        }
+
+        .top-label {
+            display: inline-block;
+            background: #d8f3ed;
+            color: #28685d;
+            padding: 6px 13px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 14px;
+        }
+
+        main {
+            padding-top: 35px;
+            padding-bottom: 35px;
+        }
+
+        .intro {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 5px solid #39a994;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 12px;
+            padding: 23px;
+            height: 100%;
+            border: 1px solid #e8e8f0;
+        }
+
+        .info-card h2 {
+            color: #423568;
+            font-size: 21px;
+            margin-bottom: 14px;
+        }
+
+        .number {
+            display: inline-flex;
+            width: 34px;
+            height: 34px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #d8f3ed;
+            color: #28685d;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        code {
+            background: #f0eef8;
+            color: #51417d;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+
+        .command-box {
+            background: #29283a;
+            color: #e8e5f4;
+            padding: 18px;
+            border-radius: 9px;
+            overflow-x: auto;
+        }
+
+        .command-box p {
+            margin-bottom: 9px;
+        }
+
+        .command-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .result {
+            background: #d8f3ed;
+            padding: 22px;
+            border-radius: 12px;
+            margin-top: 25px;
+        }
+
+        .result h2 {
+            color: #28685d;
+            font-size: 21px;
+        }
+
+        footer {
+            background: #29283a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 576px) {
+            header h1 {
+                font-size: 26px;
+            }
+
+            main {
+                padding-top: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <span class="top-label">WEB DESIGNING LAB</span>
+            <h1>Getting Started with Git and GitHub</h1>
+            <p>A simple guide to version control and publishing a website.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+            <h2>Experiment Overview</h2>
+            <p class="mb-0">
+                The aim of this experiment is to create a GitHub repository,
+                work with branches, merge changes, and publish a basic
+                website using GitHub Pages.
+            </p>
+        </section>
+
+        <section class="row g-4">
+
+            <div class="col-md-6">
+                <article class="info-card">
+                    <span class="number">1</span>
+                    <h2>What is Git?</h2>
+                    <p>
+                        Git is a version control system that keeps track
+                        of changes made to files. It helps developers
+                        manage different versions of a project.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-6">
+                <article class="info-card">
+                    <span class="number">2</span>
+                    <h2>What is GitHub?</h2>
+                    <p>
+                        GitHub is an online platform where developers
+                        can store Git repositories, share code, and
+                        work together on projects.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-6">
+                <article class="info-card">
+                    <span class="number">3</span>
+                    <h2>Branches and Merging</h2>
+                    <p>
+                        A branch allows us to make changes separately
+                        from the main project. Merging combines those
+                        changes back into another branch.
+                    </p>
+                </article>
+            </div>
+
+            <div class="col-md-6">
+                <article class="info-card">
+                    <span class="number">4</span>
+                    <h2>GitHub Pages</h2>
+                    <p>
+                        GitHub Pages is a hosting service that can
+                        publish static websites using HTML, CSS,
+                        and JavaScript directly from a repository.
+                    </p>
+                </article>
+            </div>
+
+        </section>
+
+        <section class="mt-4">
+            <div class="info-card">
+                <h2>Useful Git Commands</h2>
+                <p>These commands are commonly used when working with a repository.</p>
+
+                <div class="command-box">
+                    <p><code>git init</code> — Initialize a repository</p>
+                    <p><code>git add .</code> — Stage file changes</p>
+                    <p><code>git commit -m "message"</code> — Save a version</p>
+                    <p><code>git branch feature</code> — Create a branch</p>
+                    <p><code>git merge feature</code> — Merge branch changes</p>
+                    <p><code>git push</code> — Upload commits to a remote repository</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="result">
+            <h2>Result</h2>
+            <p class="mb-0">
+                A basic informational webpage has been created using
+                HTML, CSS, and Bootstrap. The experiment introduces
+                repository management, branching, merging, and website
+                deployment through GitHub Pages.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="mb-0">Created by Suhani | Web Designing Lab</p>
+    </footer>
+
+</body>
+</html>
