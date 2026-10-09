@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accessible Web Corner</title>
+
+    <meta name="description" content="A simple webpage demonstrating SEO and web accessibility practices.">
+    <meta name="keywords" content="HTML, SEO, accessibility, web design">
+    <meta name="author" content="Suhani">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f7f6f2;
+            color: #303b35;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #31594b;
+            color: white;
+            padding: 30px 0;
+        }
+
+        .site-name {
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 18px;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            text-decoration: underline;
+        }
+
+        .intro {
+            padding: 45px 0 25px;
+        }
+
+        .intro h1 {
+            color: #31594b;
+            font-weight: bold;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .content-card h2 {
+            color: #31594b;
+            font-size: 23px;
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 16px;
+        }
+
+        .submit-btn {
+            background-color: #31594b;
+            color: white;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 6px;
+        }
+
+        .submit-btn:hover {
+            background-color: #234437;
+        }
+
+        footer {
+            background-color: #263c33;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 25px;
+        }
+
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus {
+            outline: 3px solid #e2a84a;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="site-name">Accessible Web Corner</div>
+            <p class="mb-3">Making websites clear and easy to use</p>
+
+            <nav aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#seo">SEO Basics</a>
+                <a href="#accessibility">Accessibility</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="intro" id="home">
+            <h1>Building Better Web Pages</h1>
+            <p>
+                A good website should be easy to discover, understand,
+                and use. SEO and accessibility help make this possible.
+            </p>
+        </section>
+
+        <section class="content-card" id="seo">
+            <h2>What is SEO?</h2>
+            <p>
+                Search Engine Optimization helps search engines understand
+                webpage content and makes it easier for people to find
+                relevant information online.
+            </p>
+
+            <ul class="feature-list">
+                <li>Write a meaningful page title.</li>
+                <li>Add a useful meta description.</li>
+                <li>Use headings in a clear order.</li>
+                <li>Write informative text for links.</li>
+            </ul>
+        </section>
+
+        <section class="content-card" id="accessibility">
+            <h2>Web Accessibility</h2>
+            <p>
+                Accessibility helps people with different abilities
+                use websites. Simple HTML practices can improve
+                the browsing experience for everyone.
+            </p>
+
+            <ul class="feature-list">
+                <li>Use semantic elements like header, main and footer.</li>
+                <li>Add alternative text to meaningful images.</li>
+                <li>Connect form labels to their input fields.</li>
+                <li>Make links and buttons usable with a keyboard.</li>
+            </ul>
+
+            <img
+                src="https://placehold.co/700x220/e1ece5/31594b?text=Better+Web+Design"
+                alt="Illustration banner representing better web design"
+                class="img-fluid rounded mt-2"
+            >
+        </section>
+
+        <section class="content-card" id="contact">
+            <h2>Send a Message</h2>
+            <p>Try the form below to see properly labelled form fields.</p>
+
+            <form class="contact-form" onsubmit="showMessage(event)">
+                <label for="visitorName">Your Name</label>
+                <input
+                    type="text"
+                    id="visitorName"
+                    name="visitorName"
+                    class="form-control"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="visitorEmail">Email Address</label>
+                <input
+                    type="email"
+                    id="visitorEmail"
+                    name="visitorEmail"
+                    class="form-control"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="visitorMessage">Your Message</label>
+                <textarea
+                    id="visitorMessage"
+                    name="visitorMessage"
+                    class="form-control"
+                    rows="4"
+                    placeholder="Write your message"
+                    required
+                ></textarea>
+
+                <button type="submit" class="submit-btn">
+                    Submit Message
+                </button>
+
+                <p id="formMessage" class="mt-3" role="status"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="mb-0">© 2026 Accessible Web Corner | Created by Suhani</p>
+    </footer>
+
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("visitorName").value;
+
+            document.getElementById("formMessage").textContent =
+                "Thank you, " + name + "! Your demo message has been received.";
+        }
+    </script>
+
+</body>
+</html>
